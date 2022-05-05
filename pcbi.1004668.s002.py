@@ -1,5 +1,3 @@
-#!/usr/bin/env python
-
 """
 Identify high-quality CTCF binding sites.
 
@@ -28,7 +26,7 @@ def filter_fold_change(feature, fc = 1):
         return False
 
 # Filter based on fold-change over control sample
-fc_cutoff = 10
+fc_cutoff = 22
 epithelial = epithelial.filter(filter_fold_change, fc = fc_cutoff).saveas()
 proximal_tube = proximal_tube.filter(filter_fold_change, fc = fc_cutoff).saveas()
 kidney = kidney.filter(filter_fold_change, fc = fc_cutoff).saveas()
